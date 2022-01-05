@@ -6,6 +6,7 @@ import {
   Button,
   TouchableOpacity,
   Image,
+  Linking
 } from 'react-native';
 import Constants from 'react';
 import Feather from 'react-native-vector-icons/dist/Feather';
@@ -62,7 +63,7 @@ const ChidInfo = () => {
         </Text>
         <TouchableOpacity
           onPress={() => {
-            alert('check vaccine status');
+            Linking.openURL('https://reactnativecode.com');
           }}
           style={styles.appButtonContainer}>
           <Text style={styles.appButtonText}>Check vaccine status</Text>
