@@ -4,12 +4,12 @@ import{
     Text
 }from 'react-native'
 
-const Login=(props)=>{
+const Login=()=>{
 
     return(
         <View>
             <Text>
-                {props.data}
+                 Login
             </Text>
         </View>
     )
