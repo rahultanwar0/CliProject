@@ -11,7 +11,7 @@ import {
 import Constants from 'react';
 import Feather from 'react-native-vector-icons/dist/Feather';
 
-const TagCard = () => {
+const TagCard = (props) => {
   return (
     <View
       style={{
@@ -33,13 +33,14 @@ const TagCard = () => {
             marginTop: 10,
             marginLeft: 10,
           }}>
-          Health and Tricks
+           {props.health}
         </Text>
         <Text
           style={{
             margin: 10,
           }}>
-              Arick Gold 
+               {props.hint}
+
          </Text>
         
 

@@ -34,6 +34,7 @@ class App extends React.Component {
       ]
     };
   }
+   
   render() {
     return (
       <View>
@@ -45,10 +46,10 @@ class App extends React.Component {
             justifyContent: 'center',
             marginTop: 10,
           }}>
-          <MotherProfile />
+          <MotherProfile motherName = {"Seema kumari"} age = {"15 year"}/>
           <View style={styles.verticleLine}></View>
 
-          <ChildProfile />
+          <ChildProfile ChildName = {"jatin"} age = {"20 year"}/>
         </View>
         <View
           style={{
@@ -70,7 +71,7 @@ class App extends React.Component {
             <Text style={styles.appButtonText}>{item.name}</Text>
           </TouchableOpacity>          )}
         />
-        <TagCard/>
+        <TagCard hint={" Arick Gold "} health={"Health and Tricks"}/>
       </View>
     );
   }

@@ -10,7 +10,7 @@ import {
 import Constants from 'react';
 import Feather from 'react-native-vector-icons/dist/Feather';
 
-const MotherProfile = () => {
+const MotherProfile = (props) => {
   return (
     <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
       <View>
@@ -22,7 +22,7 @@ const MotherProfile = () => {
           justifyContent: 'center',
         }}>
         <Text style={{color: 'black', fontSize: 20, padding: 5,paddingLeft: 10}}>
-          Mother Name
+          {props.motherName}
         </Text>
 
         <Text
@@ -30,7 +30,7 @@ const MotherProfile = () => {
             color: 'black',
             padding: 5,paddingLeft: 10
           }}>
-          Mother Age
+        {props.age}
         </Text>
       </View>
     </View>
