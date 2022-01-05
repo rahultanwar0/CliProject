@@ -7,8 +7,8 @@ import {
   Button,
   StyleSheet,
   Image,
-  FlatList
-  ,TouchableOpacity,
+  FlatList,
+  TouchableOpacity,
 } from 'react-native';
 import Login from './component/home';
 import Header from './component/CustomHeader';
@@ -16,25 +16,24 @@ import MotherProfile from './component/MotherProfile';
 import ChildProfile from './component/ChildProfile';
 import ChildInfo from './component/ChildInfo';
 import ChidInfo from './component/ChildInfo';
-import TagCard from './component/TagCard'
+import TagCard from './component/TagCard';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: [{name: 'Health',email: 'sohan@'},
-      {name: 'Yoga',email: 'sohan@'},
-      {name: 'Diet',email: 'sohan@'},
-      {name: 'Nutrition',email: 'sohan@'},
-      {name: 'abc1',email: 'sohan@'},
-      {name: 'abc2',email: 'sohan@'},
-      {name: 'abc3',email: 'sohan@'},
-        
-          
-      ]
+      data: [
+        {name: 'Health', email: 'sohan@'},
+        {name: 'Yoga', email: 'sohan@'},
+        {name: 'Diet', email: 'sohan@'},
+        {name: 'Nutrition', email: 'sohan@'},
+        {name: 'abc1', email: 'sohan@'},
+        {name: 'abc2', email: 'sohan@'},
+        {name: 'abc3', email: 'sohan@'},
+      ],
     };
   }
-   
+
   render() {
     return (
       <View>
@@ -46,10 +45,10 @@ class App extends React.Component {
             justifyContent: 'center',
             marginTop: 10,
           }}>
-          <MotherProfile motherName = {"Seema kumari"} age = {"15 year"}/>
+          <MotherProfile motherName={'Seema kumari'} age={'15 year'} />
           <View style={styles.verticleLine}></View>
 
-          <ChildProfile ChildName = {"jatin"} age = {"20 year"}/>
+          <ChildProfile ChildName={'jatin'} age={'20 year'} />
         </View>
         <View
           style={{
@@ -58,20 +57,27 @@ class App extends React.Component {
             marginTop: 10,
           }}
         />
-        <ChidInfo />
+        <ChidInfo dateOfBirth={"11 jan 2021"} childHight={"Child Hight : 71.4-82.7 CM"} childeWight={" Child Wight:7.7 -12.2Kg"} />
         <FlatList
-         horizontal={true}
+          horizontal={true}
           data={this.state.data}
           renderItem={({item}) => (
             <TouchableOpacity
-            onPress={() => {
-              alert(item.name)
-            }}
-            style={styles.appButtonContainer}>
-            <Text style={styles.appButtonText}>{item.name}</Text>
-          </TouchableOpacity>          )}
+              onPress={() => {
+                alert(item.name);
+              }}
+              style={styles.appButtonContainer}>
+              <Text style={styles.appButtonText}>{item.name}</Text>
+            </TouchableOpacity>
+          )}
         />
-        <TagCard hint={" Arick Gold "} health={"Health and Tricks"}/>
+
+        <TagCard hint={' Arick Gold '} health={'Health and Tricks'} />
+        <TagCard hint={' Arick Gold '} health={'Health and Tricks'} />
+
+        <TagCard hint={' Arick Gold '} health={'Health and Tricks'} />
+
+        <TagCard hint={' Arick Gold '} health={'Health and Tricks'} />
       </View>
     );
   }
@@ -89,7 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 40,
     marginTop: 20,
-    marginBottom:20,
+    marginBottom: 20,
     paddingVertical: 7,
     margin: 5,
     paddingHorizontal: 10,

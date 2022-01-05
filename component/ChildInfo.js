@@ -11,7 +11,7 @@ import {
 import Constants from 'react';
 import Feather from 'react-native-vector-icons/dist/Feather';
 
-const ChidInfo = () => {
+const ChidInfo = (props) => {
   return (
     <View
       style={{
@@ -32,7 +32,7 @@ const ChidInfo = () => {
           style={{
             margin: 10,
           }}>
-          11 jan 2021
+          {props.dateOfBirth}
         </Text>
         <Text
           style={{
@@ -53,13 +53,13 @@ const ChidInfo = () => {
             marginTop: 10,
             marginLeft: 10,
           }}>
-          Child Hight : 71.4-82.7 CM
+          {props.childHight}
         </Text>
         <Text
           style={{
             margin: 10,
           }}>
-          Child Wight:7.7 -12.2Kg
+          {props.childeWight}
         </Text>
         <TouchableOpacity
           onPress={() => {
