@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
 import Constants from 'react';
 import Feather from 'react-native-vector-icons/dist/Feather';
 
@@ -17,10 +17,18 @@ const Header = () => {
         style={{
           flexDirection: 'row',
         }}>
-        <Text style={{margin: 6, color: 'white', fontSize: 20}}>AKG India</Text>
+        <Text style={{margin: 6, color: 'white', fontSize: 20}}>AKF India</Text>
       </View>
 
-      <View>
+      <View style={{flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => {
+            alert('Language');
+          }}
+          style={styles.appButtonContainer}>
+          <Text style={styles.appButtonText}>Change language</Text>
+        </TouchableOpacity>
+
         <Feather
           style={{margin: 6}}
           name="align-justify"
@@ -34,5 +42,23 @@ const Header = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  // ...
+  appButtonContainer: {
+    elevation: 8,
+    backgroundColor: 'white',
+    paddingVertical: 7,
+    margin: 5,
+    paddingHorizontal: 10,
+  },
+  appButtonText: {
+    fontSize: 13,
+    color: 'black',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    textTransform: 'uppercase',
+  },
+});
 
 export default Header;
